@@ -1,0 +1,19 @@
+{
+  "name": "liri-bot",
+  "version": "1.0.0",
+  "description": "liri bot beta",
+  "main": "keys.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LyleHorowitz/LIRI-BOT.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LyleHorowitz/LIRI-BOT/issues"
+  },
+  "homepage": "https://github.com/LyleHorowitz/LIRI-BOT#readme"
+}

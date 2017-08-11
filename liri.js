@@ -2,7 +2,7 @@
 var keys = require("./keys.js");
 
 // Gets all of keys from the keys file.
-var keyList = keys.myKeys;
+var keyList = keys.twitterKeys;
 
 // Loop through key list and print out details
 for (var key in keyList) {
