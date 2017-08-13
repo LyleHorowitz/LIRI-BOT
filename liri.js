@@ -17,7 +17,7 @@ function pickOne(action){
 		break;
 	case "movie-this":
 		movieThis();
-		// (Remember to write a function "Spotify this song")
+		// (Remember to write a function "Movie this")
 		break;
 	case "do-what-it-says":
 		doWhatItSays();
@@ -27,6 +27,7 @@ function pickOne(action){
 		console.log("Invalid input. Try again!");
 	}
 }
+
 function myTweets(action){
 
 // Gets all of keys from the keys file.
@@ -37,7 +38,12 @@ for (var key in keyList) {
   console.log("A " + key + " key is " + keyList[key] + ".");
 }
 
-var client = new Twitter(keyList);
+// Load the Twitter API
+var twitter = require("twitter");
+
+// New instance of a Twitter client
+var client = new twitter(keys.twitterKeys);
+
 var parameters = {
 	screen_name: "LEBRON__CURRY",
 	count: 20
@@ -51,10 +57,12 @@ client.get("statuses/user_timeline", parameters, function(err, response) {
 	console.log(response);
 	});
 
+
 // GET https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=twitterapi&count=2
 
 // get from request
 // created_at
 // text
+
 
 }
