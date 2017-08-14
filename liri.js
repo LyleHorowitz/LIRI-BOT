@@ -1,11 +1,12 @@
 var fs = require("fs");
+var twitter = require("twitter");
 
 // Grabs the key variables
 var keys = require("./keys.js");
 
 var action = process.argv[2];
 
-function pickOne(action){
+
 	switch (action) {
 	case "my-tweets":
 		myTweets();
@@ -26,9 +27,9 @@ function pickOne(action){
 	default :
 		console.log("Invalid input. Try again!");
 	}
-}
 
-function myTweets(action){
+
+function myTweets(){
 
 // Gets all of keys from the keys file.
 var keyList = keys.twitterKeys;
