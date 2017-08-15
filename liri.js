@@ -1,6 +1,7 @@
+var fs = require("fs");
+
 // Twitter
 
-var fs = require("fs");
 var twitter = require("twitter");
 
 // Grabs the key variables
@@ -53,33 +54,64 @@ client.get("statuses/user_timeline", parameters, function(err, response) {
     if (err) {
       return console.log(err);
 	}
-	console.log(response);
+	for (var i = 0; i < response.length; i++) {
+		console.log("-----------")
+		console.log(response[i].text+"\n")
+		console.log("-----------")
+	}
+	
 	});
+}
+
 
 // Spotify
 
-var Spotify = require('node-spotify-api');
- 
-var spotify = new Spotify({
-  id: '925e3806b30c4ac2878edcfc08392194',
-  secret: 'e015f1e4683a4c39ade086dc77fe1448'
-});
- 
-spotify.search({ type: 'track', query: 'All the Small Things' }, function(err, data) {
-  if (err) {
-    return console.log('Error occurred: ' + err);
-  }
- 
-console.log(data); 
-});
-
-
-
-// GET https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=twitterapi&count=2
-
-// get from request
-// created_at
-// text
-
-
-}
+// var Spotify = require('node-spotify-api');
+//  
+// var spotify = new Spotify({
+//   id: '925e3806b30c4ac2878edcfc08392194',
+//   secret: 'e015f1e4683a4c39ade086dc77fe1448'
+// });
+// 
+// function spotifyThisSong(){
+// 
+// // Gets all of keys from the keys file.
+// var keyList = keys.spotifyKeys;
+// 
+// // Loop through key list and print out details
+// for (var key in keyList) {
+//   console.log("A " + key + " key is " + keyList[key] + ".");
+// }
+// 
+// // Load the Spotify API
+// var spotify = require("spotify");
+// 
+// // New instance of a Spotify client
+// var client = new spotify(keys.spotifyKeys);
+// 
+// spotify.search({ type: 'track', query: 'inputName' }, function(err, data) {
+//     if ( err ) {
+//         console.log('Error occurred: ' + err);
+//         return;
+//     }
+//  
+//     // Do something with 'data' 
+// });
+// 
+// var spotifyParams = {
+//                 type: 'track',
+//                 query: inputName};
+// 
+// 
+// client.get(" ", spotifyParams, function(err, response) {
+//     if (err) {
+//       return console.log(err);
+// 	}
+// 	for (var i = 0; i < response.length; i++) {
+// 		console.log("-----------")
+// 		console.log(response[i].text+"\n")
+// 		console.log("-----------")
+// 	}
+// 
+// 
+// });
