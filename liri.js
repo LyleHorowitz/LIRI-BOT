@@ -115,3 +115,9 @@ client.get("statuses/user_timeline", parameters, function(err, response) {
 // 
 // 
 // });
+
+// pseudo coding final steps:
+// "movie-this" command returning omdb
+// "do-what-it-is" command return 
+
+// v_v
